@@ -5,9 +5,9 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "What is OpenSox?",
+    question: "What is Opensox AI?",
     answer:
-      "OpenSox is a platform to help developers find and contribute to open-source projects that match their skills and interests.",
+      "OpenSox is a platform to help developers find and contribute to Open Source projects that match their skills and interests and get opportunities (Jobs/Internships/Bounties) in Open Source companies.",
   },
   {
     question: "How can I find a project to contribute to?",
@@ -15,8 +15,9 @@ export const faqs: FAQ[] = [
       "You can browse the list of projects on our main page. We provide filters to help you narrow down the projects based on language, popularity, and activity.",
   },
   {
-    question: "Is OpenSox free to use?",
-    answer: "Yes, OpenSox is completely free for both developers and project maintainers.",
+    question: "Is Opensox AI free to use?",
+    answer:
+      "Yes, Opensox AI is free for both developers and project maintainers.",
   },
   {
     question: "How are projects ranked?",
@@ -32,5 +33,10 @@ export const faqs: FAQ[] = [
     question: "Can I suggest new features?",
     answer:
       "Absolutely! We welcome feedback and feature suggestions. You can reach out to us through our contact form or GitHub repository.",
+  },
+  {
+    question: "What is Opensox premium?",
+    answer:
+      "Opensox premium provides you human feedback + advanced tools so that you can start rocking Open Source faster. For more details, check this: opensox.ai/pricing",
   },
 ];
