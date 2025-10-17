@@ -9,7 +9,6 @@ import Navbar from '@/components/landing-sections/navbar'
 import Testimonials from '@/components/landing-sections/testimonials'
 import Video from '@/components/landing-sections/video'
 import React from 'react'
-import { FaqSection } from '@/components/faq/FaqSection'
 
 
 const Landing = () => {
@@ -21,7 +20,6 @@ const Landing = () => {
                 <Bento />
                 <Video />
                 <HowItWorks />
-                <FaqSection />
                 <Brands />
                 <Testimonials />
             </div>
