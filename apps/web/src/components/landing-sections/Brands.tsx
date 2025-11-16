@@ -36,7 +36,6 @@ const Brands = () => {
             <span
               className="md:text-7xl md:text-[76px] relative pointer-events-none text-center bg-gradient-to-b from-[#9159E2] to-[#341e7b] to-80% bg-clip-text text-transparent text-[clamp(1rem,10vw,6rem)] overflow-hidden font-mono tracking-tighter font-medium"
               style={{
-                textShadow: "0 0 40px rgba(145, 89, 226, 0.5)",
               }}
             >
               {queryCount}
@@ -56,7 +55,6 @@ const Brands = () => {
             <span
               className="md:text-7xl md:text-[76px] relative pointer-events-none text-center bg-gradient-to-b from-[#9159E2] to-[#341e7b] to-80% bg-clip-text text-transparent text-[clamp(1rem,10vw,6rem)] overflow-hidden font-mono tracking-tighter font-medium"
               style={{
-                textShadow: "0 0 40px rgba(145, 89, 226, 0.5)",
               }}
             >
               {userCount}
