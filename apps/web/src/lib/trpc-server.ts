@@ -28,9 +28,13 @@ export function createAuthenticatedClient(session: Session) {
         transformer: superjson,
         url: `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000"}/trpc`,
         headers() {
-          return {
-            authorization: `Bearer ${session.user?.email}`, // Adjust based on your auth strategy
-          };
+          const token = session.accessToken;
+          if (token) {
+            return {
+              authorization: `Bearer ${token}`,
+            };
+          }
+          return {};
         },
       }),
     ],

@@ -15,8 +15,6 @@ import {
   StarIcon,
   DocumentTextIcon,
   Cog6ToothIcon,
-  HeartIcon,
-  EnvelopeIcon,
   NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import { useShowSidebar } from "@/store/useShowSidebar";
@@ -25,8 +23,6 @@ import { ProfilePic } from "./ProfilePic";
 import { useSubscription } from "@/hooks/useSubscription";
 import { OpensoxProBadge } from "../sheet/OpensoxProBadge";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import { useFilterStore } from "@/store/useFilterStore";
-import { Badge } from "@/components/ui/badge";
 
 const SIDEBAR_ROUTES = [
   {
