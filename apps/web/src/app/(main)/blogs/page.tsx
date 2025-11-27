@@ -8,6 +8,8 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/landing-sections/footer";
 import { blogs, BlogTag } from "@/data/blogs";
 
+const MotionLink = motion(Link);
+
 const filterTags: BlogTag[] = [
   "all",
   "engineering",
@@ -18,8 +20,6 @@ const filterTags: BlogTag[] = [
 
 export default function BlogsPage() {
   const [selectedTag, setSelectedTag] = useState<BlogTag>("all");
-  // const [search, setSearch] = useState("");
-  const MotionLink = motion(Link);
 
   const filteredBlogs = useMemo(() => {
     let result = blogs;
