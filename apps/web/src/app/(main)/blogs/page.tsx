@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import BlogHeader from "@/components/blogs/BlogHeader";
 import Header from "@/components/ui/header";
-// import CTA from "@/components/landing-sections/CTA";
 import Footer from "@/components/landing-sections/footer";
 import { blogs, BlogTag } from "@/data/blogs";
 
@@ -74,7 +73,7 @@ export default function BlogsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {filteredBlogs.length === 0 ? (
             <div className="col-span-full flex justify-center">
-              <p className="text-text-muted text-base text-center">
+              <p className="text-text-secondary text-base font-medium text-center">
                 No blog posts found, More blogs coming soon stay tuned.
               </p>
             </div>
@@ -98,17 +97,11 @@ export default function BlogsPage() {
                   {blog.linkText}
                 </h3>
 
-                <p className="text-text-muted text-xs uppercase tracking-[0.35em] mb-3">
+                <p className="text-text-muted text-xs font-medium uppercase tracking-[0.35em] mb-3">
                   {blog.tag} • {blog.date}
                 </p>
 
-                {blog.description && (
-                  <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-                    {blog.description}
-                  </p>
-                )}
-
-                <span className="text-link hover:text-link-hover text-sm font-medium">
+                <span className="text-link hover:text-link-hover text-sm font-medium tracking-wide">
                   Read more
                 </span>
               </MotionLink>
