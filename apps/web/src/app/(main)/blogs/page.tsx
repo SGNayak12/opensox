@@ -110,14 +110,6 @@ export default function BlogsPage() {
         </div>
       </div>
       <Footer />
-      
-      {/* <div className="max-w-[2000px] w-full mx-auto">
-        <FaqSection />
-        <Brands />
-        <Testimonials />
-        <CTA />
-        
-      {/* </div>  */}
     </main>
   );
 }
