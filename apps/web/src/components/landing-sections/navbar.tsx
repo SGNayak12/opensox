@@ -11,8 +11,8 @@ import { cn } from "@/lib/utils";
 const Navbar = () => {
   const { scrollYProgress } = useScroll();
   const pathname = usePathname();
-  const isPricingPage = pathname === "/pricing";
-  const [showNavbar, setShowNavbar] = useState(isPricingPage ? true : false);
+  const isStaticPage = pathname === "/pricing" || pathname === "/blogs";
+  const [showNavbar, setShowNavbar] = useState(isStaticPage ? true : false);
   const [isOpen, setIsOpen] = useState(false);
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (!isPricingPage) {
+    if (!isStaticPage) {
       setShowNavbar(latest > 0);
     }
   });
@@ -50,7 +50,7 @@ const Navbar = () => {
       transition={{ duration: 0.3 }}
       className={cn(
         " z-40  flex items-center justify-between px-4 py-3  bg-neutral-900/5 backdrop-blur-xl  border-white/10",
-        isPricingPage
+        isStaticPage
           ? "relative h-max md:w-full top-0 border-b"
           : "fixed rounded-3xl top-4 border w-[94%] md:w-[80%] mx-auto left-1/2 -translate-x-1/2"
       )}

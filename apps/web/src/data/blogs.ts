@@ -10,6 +10,7 @@ export interface BlogPost {
   linkText: string;
   link: string;
   tag: BlogTag;
+  description?: string;
 }
 
 export const blogs: BlogPost[] = [
