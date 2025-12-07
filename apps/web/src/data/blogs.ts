@@ -21,7 +21,7 @@ export const blogs: BlogPost[] = [
   },
   {
     date: "06-12-25",
-    linkText: "why opensox ai doesn't do \"follow-ups\"?",
+    linkText: 'why opensox ai doesn\'t do "follow-ups"?',
     link: "https://x.com/ajeetunc/status/1997309049910730995?s=20",
     tag: "startup",
   },
