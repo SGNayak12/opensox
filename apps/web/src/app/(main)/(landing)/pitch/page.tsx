@@ -89,9 +89,9 @@ const Pitch = () => {
               }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono mb-3 lowercase">
+              <h2 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono mb-3 lowercase">
                 table of contents
-              </h3>
+              </h2>
               <nav>
                 <ul className="space-y-1.5 text-text-secondary font-medium text-md lg:text-xl lowercase inline-block">
                   <li>
