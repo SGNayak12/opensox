@@ -141,6 +141,18 @@ const TestimonialsPage = () => {
 
   const imageTestimonialsData: ImageTestimonial[] = imageTestimonials;
 
+  const allTestimonials = useMemo(() => {
+    return [...textTestimonials, ...imageTestimonialsData];
+  }, [textTestimonials, imageTestimonialsData]);
+
+  const leftColumnTestimonials = useMemo(() => {
+    return allTestimonials.filter((_, idx) => idx % 2 === 0);
+  }, [allTestimonials]);
+
+  const rightColumnTestimonials = useMemo(() => {
+    return allTestimonials.filter((_, idx) => idx % 2 === 1);
+  }, [allTestimonials]);
+
   return (
     <main className="min-h-screen w-full bg-[#101010] text-white font-sans overflow-hidden relative">
       <Navbar />
@@ -195,33 +207,30 @@ const TestimonialsPage = () => {
           </div>
         )}
 
-        {!isLoading &&
-          (textTestimonials.length > 0 || imageTestimonialsData.length > 0) && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto max-w-7xl">
-              <div className="space-y-4">
-                {textTestimonials.map((testimonial: TextTestimonial) => (
-                  <TestimonialCard key={testimonial.id} item={testimonial} />
-                ))}
-              </div>
-
-              <div className="space-y-4">
-                {imageTestimonialsData.map((testimonial: ImageTestimonial) => (
-                  <TestimonialCard key={testimonial.id} item={testimonial} />
-                ))}
-              </div>
+        {!isLoading && allTestimonials.length > 0 && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto max-w-7xl">
+            <div className="space-y-4">
+              {leftColumnTestimonials.map((testimonial: Testimonial) => (
+                <TestimonialCard key={testimonial.id} item={testimonial} />
+              ))}
             </div>
-          )}
+
+            <div className="space-y-4">
+              {rightColumnTestimonials.map((testimonial: Testimonial) => (
+                <TestimonialCard key={testimonial.id} item={testimonial} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Empty State */}
-        {!isLoading &&
-          textTestimonials.length === 0 &&
-          imageTestimonialsData.length === 0 && (
-            <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-              <p className="text-neutral-400 text-lg">
-                No testimonials yet. Be the first to share your experience!
-              </p>
-            </div>
-          )}
+        {!isLoading && allTestimonials.length === 0 && (
+          <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
+            <p className="text-neutral-400 text-lg">
+              No testimonials yet. Be the first to share your experience!
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="max-w-[2000px] w-full mx-auto">
